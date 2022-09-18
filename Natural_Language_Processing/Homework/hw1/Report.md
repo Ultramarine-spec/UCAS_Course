@@ -148,22 +148,22 @@ $H_{Chinese}=9.96$，$H_{English}=4.17$
 
 ​	实验中，我们首先按收集到文本的顺序，每次增加总数据量的$\frac{1}{20}$，得到如下的熵随文本数据规模的变化曲线：
 
-<img src="D:\CASIA\研一\自然与语言处理\hw1\hw1.assets\image-20220917151049344.png" alt="image-20220917151049344" style="zoom:80%;" />
+<img src="D:\CASIA\研一\自然与语言处理\hw1\hw1.assets\image-20220917151049344.png" alt="image-20220917151049344" style="zoom: 67%;" />
 
-<center><font size=2>中文汉字的熵随文本数据规模扩大的变化曲线</font></center>
+<center><font size=1.5>中文汉字的熵随文本数据规模扩大的变化曲线</font></center>
 
-<img src="D:\CASIA\研一\自然与语言处理\hw1\hw1.assets\image-20220917151038415.png" alt="image-20220917151038415" style="zoom:80%;" />
+<img src="D:\CASIA\研一\自然与语言处理\hw1\hw1.assets\image-20220917151038415.png" alt="image-20220917151038415" style="zoom: 67%;" />
 
-<center><font size=2>英文字母的熵随文本数据规模扩大的变化曲线</font></center>
+<center><font size=1.5>英文字母的熵随文本数据规模扩大的变化曲线</font></center>
 
 ​	可以看出随着文本数据的增大，熵的值逐渐增加，最终呈现出收敛的趋势，这符合大数定理中频率趋近于概率的现象。此外，我们发现熵在数据规模刚开始扩大时有一个明显的上升趋势，而且整个过程波动较小。我们猜测这个现象与我们的数据收集方式有关。例如，我们的英文数据是通过 Wikipedia 词条之间的相互链接所爬取到的。因此，一开始收集到的数据之间相关性可能较大，从而熵较小。而随着数据规模的扩大，词条之间的相关性减弱，熵就呈现一个上升的趋势。我们的中文数据是通过URL链接中的ID每次加一爬取到的，相邻ID之前可能也有着较大的相关性。为了验证这一点，我们将原本的按照爬取顺序增加数据规模的方式改成随机打乱筛选的方式，得到如下结果：
 
-<img src="D:\CASIA\研一\自然与语言处理\hw1\hw1.assets\image-20220917153356490.png" alt="image-20220917153356490" style="zoom:80%;" />
+<img src="D:\CASIA\研一\自然与语言处理\hw1\hw1.assets\image-20220917153356490.png" alt="image-20220917153356490" style="zoom: 67%;" />
 
-<center><font size=2>中文汉字的熵随文本数据规模扩大的变化曲线</font></center>
+<center><font size=1.5>中文汉字的熵随文本数据规模扩大的变化曲线</font></center>
 
-<img src="D:\CASIA\研一\自然与语言处理\hw1\hw1.assets\image-20220917152350088.png" alt="image-20220917152350088" style="zoom:80%;" />
+<img src="D:\CASIA\研一\自然与语言处理\hw1\hw1.assets\image-20220917152350088.png" alt="image-20220917152350088" style="zoom: 67%;" />
 
-<center><font size=2>英文字母的熵随文本数据规模扩大的变化曲线</font></center>
+<center><font size=1.5>英文字母的熵随文本数据规模扩大的变化曲线</font></center>
 
 ​	对比两次实验结果，我们发现在加入随机打乱筛选的操作后，熵的值波动增大，上升趋势减弱，并且依然呈现了收敛的趋势。
